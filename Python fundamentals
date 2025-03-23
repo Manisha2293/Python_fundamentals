@@ -1,0 +1,153 @@
+Question 1: By using a single 'print' function print the provided string in specified execution format.
+            Hello World
+            Welcome to 'Python' Programming
+
+Answer: 
+print("Hello World\nWelcome to 'Python' Programming")
+Output:
+Hello World
+Welcome to 'Python' Programming
+
+
+Question 2: Design a Python program which can calculate the area by taking radius as input by 'user input' method.
+            instead of giving direct values try using "float(input())"
+
+Answer: 
+radius = float(input("Enter the radius of the circle: "))
+o/p: Enter the radius of the circle:  5
+area = 3.14 * radius**2
+print(area)
+o/p: 78.5
+
+
+Question 3: Write a python program which can take your first and last name seperately and execute as shown below.
+            Sample execution : Hello 'first name' 'last name', hope you are doing good
+Answer:
+frstname= str(input("Enter first name"))
+o/p: Enter first name manisha
+lastname= str(input("Enter last name"))
+o/p: Enter last name Agrawal
+print(f"Hello {frstname} {lastname}, hope you are doing good")
+o/p: Hello manisha Agrawal, hope you are doing good
+
+Question 4: Write a python program which can convert kilograms to grams.
+
+Answer: 
+kg = float(input("Enter weight in kilograms: "))
+o/p: Enter weight in kilograms:  10
+g= kg * 1000
+print(g)
+o/p: 10000.0
+
+Question 5: Write a python program which can calculate the electricity bill by considering the no. of units consumed and other parameters are mentioned below.
+            If units consumed is less than 50 then bill amount should be 100INR.
+            If units consumed between 50 - 300 then each unit will be charged at 4.5 INR.
+            If units are consumed more than 300 then that billed individual have to pay base pay as 1000INR and 300 units will be reduced from his total consumed units and
+              for remaining units 7 INR will be charged for each unit.
+Answer:
+e_bill = float(input("Enter no. of units consumed"))
+o/p: Enter no. of units consumed 200.5
+if e_bill<50:
+    print("100INR")
+elif e_bill>=50 and e_bill<=300:
+    print(e_bill*4.5)
+else:
+    print(1000+(e_bill-300)*7)
+o/p:902.25
+
+
+Question 6:Write a program to check if the input is positive or negative.
+
+Answer: 
+num = float(input("Enter a number: "))
+o/p: Enter a number:  5.87
+if num > 0:
+    print("The number is positive.")
+elif num < 0:
+    print("The number is negative.")
+else:
+    print("The number is zero.")
+o/p:
+The number is positive.
+
+
+Question 7: Define a function which can identify if a user has entered specific string or not.
+            specified string = "India"
+
+Answer:
+def check_str(user_input):
+    specified_string = "India"
+    if specified_string==user_input:
+        return("user has input specified string")
+    else:
+        return("user has not input specified string")
+user_input = input("Enter a string: ")
+o/p: Enter a string:  India
+result=check_str(user_input)
+print(result)
+o/p: user has input specified string
+
+
+Question 8:  Define a function which will greet by taking user name as input.
+            input = name
+            hello 'name', hope you are doing well
+
+Answer: 
+def greet():
+    name=input("Enter name: ")
+    print(f"hello {name}, hope you are doing well")
+greet()
+o/p: 
+Enter name:  manisha
+hello manisha, hope you are doing well
+
+
+Question 9: Check if a given string is palindrome.
+            A string is palindrome if the reverse of the string is same as itself.
+            For eg. madam
+            Print " `string` is palindrome" if it is palindrome
+            else " `string` is not a palindrome" if it is not a palindrome.
+            
+            Hint : Use slicing to get reverse of the string.
+
+Answer:
+user_input=str(input("Enter a string:"))
+o/p: Enter a string: madam
+reversed_string = user_input[::-1]
+def palindrome():
+    if user_input==reversed_string:
+        print(f"{user_input} is palindrome")
+    else:
+        print(f"{user_input} is not a palindrome")
+palindrome()
+o/p: madam is palindrome
+
+
+Question 10: Write a python program to find n is a leap year.
+            Print "n is a leap year" if the given year is leap year.
+            Print "n is not a leap year" if the given year is not leap year.
+            Replace n with given year.
+            
+            Hint : Use nested if-else
+
+Answer:
+year=int(input("Enter a number to check for leap year:"))
+o/p: Enter a number to check for leap year: 2026
+def leap_yr(user_input):
+    if (year % 4 == 0):
+        if (year % 100 == 0):
+            if (year % 400 == 0):
+                print(f"{year} is a leap year")
+            else:
+                print(f"{year} is not a leap year")
+        else:
+            print(f"{year} is a leap year")
+    else:
+        print(f"{year} is not a leap year")
+leap_yr(year)
+o/p: 2026 is not a leap year
+
+
+
+
+
